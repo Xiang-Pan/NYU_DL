@@ -81,6 +81,13 @@ $b^{(2)}$ & \\
 \textbf{Solution:}
 
 (a)
+\begin{enumerate}
+\item Clear the gradients of all parameters. (model.zero\_grad())
+\item Forward the Data (output = model.forward(batch))
+\item Compute the loss function (loss = criterion(output, target))
+\item Backpropagation to compute the gradients of the loss function with respect to the parameters. (loss.backward())
+\item Update the parameters and update the optimizer status. (optimizer.step())
+\end{enumerate}
 
 
 (b)
@@ -149,6 +156,49 @@ You decide to use $f(\cdot) = (\cdot)^+$ but keep $g$ as $\sigma$. Explain why t
 
 
 \end{enumerate}
+
+\textbf{Solution:}
+(a)
+\begin{center}
+    \begin{tabular}{ |c |c |c | }
+    \hline
+    Layer & Input & Output \\
+    \hline
+    $\texttt{Linear}_1$ &  &  \\
+    \hline
+    $f$ &  &  \\  
+    \hline
+    $\texttt{Linear}_2$ & &  \\
+    \hline
+    $g$ &  &  \\
+    \hline
+    \texttt{Loss} &  &  \\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+\begin{center}
+    \begin{tabular}{ |c |c | }
+    \hline
+    Parameter &  Gradient \\
+    \hline
+    $W^{(1)}$ &\\
+    \hline
+    $b^{(1)}$ &  \\ 
+    \hline
+    $W^{(2)}$ &  \\
+    \hline
+    $b^{(2)}$ & \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+(b)
+
+(c)
+
+(d)
 
 \subsection{Conceptual Questions}
 
