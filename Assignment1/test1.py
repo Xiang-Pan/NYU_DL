@@ -1,12 +1,3 @@
-'''
-Author: Xiang Pan
-Date: 2022-02-16 17:10:09
-LastEditTime: 2022-02-16 18:22:20
-LastEditors: Xiang Pan
-Description: 
-FilePath: /Assignment1/test1.py
-@email: xiangpan@nyu.edu
-'''
 from collections import OrderedDict
 
 import torch

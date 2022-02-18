@@ -1,3 +1,12 @@
+'''
+Author: Xiang Pan
+Date: 2022-02-16 17:10:10
+LastEditTime: 2022-02-17 16:13:10
+LastEditors: Xiang Pan
+Description: 
+FilePath: /Assignment1/test7.py
+@email: xiangpan@nyu.edu
+'''
 from collections import OrderedDict
 
 import torch
@@ -11,14 +20,14 @@ net = MLP(
     f_function='sigmoid',
     linear_2_in_features=20,
     linear_2_out_features=5,
-    g_function='sigmoid'
+    g_function='relu'
 )
 x = torch.randn(10, 2)
 y = (torch.randn(10, 5) < 0.5) * 1.0
 
 net.clear_grad_and_cache()
 y_hat = net.forward(x)
-J, dJdy_hat = bce_loss(y, y_hat)
+J, dJdy_hat = mse_loss(y, y_hat)
 net.backward(dJdy_hat)
 
 #------------------------------------------------
@@ -28,7 +37,7 @@ net_autograd = nn.Sequential(
         ('linear1', nn.Linear(2, 20)),
         ('sigmoid1', nn.Sigmoid()),
         ('linear2', nn.Linear(20, 5)),
-        ('sigmoid2', nn.Sigmoid()),
+        ('relu2', nn.ReLU()),
     ])
 )
 net_autograd.linear1.weight.data = net.parameters['W1']
@@ -38,7 +47,7 @@ net_autograd.linear2.bias.data = net.parameters['b2']
 
 y_hat_autograd = net_autograd(x)
 
-J_autograd = torch.nn.BCELoss()(y_hat_autograd, y)
+J_autograd = torch.nn.MSELoss()(y_hat_autograd, y)
 
 net_autograd.zero_grad()
 J_autograd.backward()

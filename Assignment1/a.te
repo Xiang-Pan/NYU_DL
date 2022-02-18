@@ -1,7 +1,0 @@
-       z1 = self.parameters['W1'] @ x + self.parameters['b1']
-        self.cache['z1'] = z1
-        z2 = self.f_function.forward(z1)
-        self.cache['z2'] = z2
-        z3 = self.parameters['W2'] @ z2 + self.parameters['b2']
-        self.cache['z3'] = z3
-        y_hat = self.g_function.forward(z3)

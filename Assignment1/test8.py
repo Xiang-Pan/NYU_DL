@@ -1,3 +1,12 @@
+'''
+Author: Xiang Pan
+Date: 2022-02-16 17:10:10
+LastEditTime: 2022-02-17 17:16:06
+LastEditors: Xiang Pan
+Description: 
+FilePath: /Assignment1/test8.py
+@email: xiangpan@nyu.edu
+'''
 from collections import OrderedDict
 
 import torch
@@ -8,7 +17,7 @@ from mlp import MLP, mse_loss, bce_loss
 net = MLP(
     linear_1_in_features=2,
     linear_1_out_features=20,
-    f_function='sigmoid',
+    f_function='identity',
     linear_2_in_features=20,
     linear_2_out_features=5,
     g_function='sigmoid'
@@ -26,9 +35,9 @@ net.backward(dJdy_hat)
 net_autograd = nn.Sequential(
     OrderedDict([
         ('linear1', nn.Linear(2, 20)),
-        ('sigmoid1', nn.Sigmoid()),
+        # ('sigmoid1', nn.ReLU()),
         ('linear2', nn.Linear(20, 5)),
-        ('sigmoid2', nn.Sigmoid()),
+        ('relu2', nn.Sigmoid()),
     ])
 )
 net_autograd.linear1.weight.data = net.parameters['W1']
