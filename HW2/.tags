@@ -1,0 +1,217 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/xiangpan/Labs/NYU_DL/HW2/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+(a)	part_1.tex	/^\\subsection*{(a)}$/;"	u	section:Theory (50pt)
+(a)	part_1.tex	/^\\subsubsection*{(a)}$/;"	b	subsection:Theory (50pt)""Recurrent Neural Networks (20 pts)
+(b)	part_1.tex	/^\\subsection*{(b)}$/;"	u	section:Theory (50pt)
+(b)	part_1.tex	/^\\subsubsection*{(b)}$/;"	b	subsection:Theory (50pt)""Recurrent Neural Networks (20 pts)
+(c)	part_1.tex	/^\\subsection*{(c)}$/;"	u	section:Theory (50pt)
+(c)	part_1.tex	/^\\subsubsection*{(c)}$/;"	b	subsection:Theory (50pt)""Recurrent Neural Networks (20 pts)
+(d)	part_1.tex	/^\\subsubsection*{(d)}$/;"	b	subsection:Theory (50pt)""Recurrent Neural Networks (20 pts)
+(i)	part_1.tex	/^\\subsubsection*{(i)}$/;"	b	subsection:Theory (50pt)""(c)
+(ii)	part_1.tex	/^\\subsubsection*{(ii)}$/;"	b	subsection:Theory (50pt)""(c)
+(iii)	part_1.tex	/^\\subsubsection*{(iii)}$/;"	b	subsection:Theory (50pt)""(c)
+(iv)	part_1.tex	/^\\subsubsection*{(iv)}$/;"	b	subsection:Theory (50pt)""(c)
+1	part_1.tex	/^\\subsubsection*{1}$/;"	b	subsection:Theory (50pt)""Debugging loss curves (10pts)
+2	part_1.tex	/^\\subsubsection*{2}$/;"	b	subsection:Theory (50pt)""Debugging loss curves (10pts)
+3	part_1.tex	/^\\subsubsection*{3}$/;"	b	subsection:Theory (50pt)""Debugging loss curves (10pts)
+4	part_1.tex	/^\\subsubsection*{4}$/;"	b	subsection:Theory (50pt)""Debugging loss curves (10pts)
+BATCH_SIZE	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^BATCH_SIZE = 64$/;"	v
+BATCH_SIZE	hw2_cnn.py	/^BATCH_SIZE = 64$/;"	v
+Convolutional Neural Netoworks (20 pts)	part_1.tex	/^\\subsection{Convolutional Neural Netoworks (20 pts)}$/;"	u	section:Theory (50pt)
+D	hw2_rnn.py	/^D = DELAY$/;"	v
+DATASET_SIZE	hw2_rnn.py	/^DATASET_SIZE = 200000$/;"	v
+DELAY	hw2_rnn.py	/^DELAY = 4$/;"	v
+Debugging loss curves (10pts)	part_1.tex	/^\\subsection{Debugging loss curves (10pts)}$/;"	u	section:Theory (50pt)
+DifficultyLevel	res/sequential_tasks.py	/^    class DifficultyLevel:$/;"	c	class:TemporalOrderExp6aSequence
+EASY	res/sequential_tasks.py	/^        EASY, NORMAL, MODERATE, HARD, NIGHTMARE = range(5)$/;"	v	class:TemporalOrderExp6aSequence.DifficultyLevel
+EchoData	res/sequential_tasks.py	/^class EchoData():$/;"	c
+EchoDataset	hw2_rnn.py	/^class EchoDataset(torch.utils.data.IterableDataset):$/;"	c
+GRUMemory	hw2_rnn.py	/^class GRUMemory(torch.nn.Module):$/;"	c
+HARD	res/sequential_tasks.py	/^        EASY, NORMAL, MODERATE, HARD, NIGHTMARE = range(5)$/;"	v	class:TemporalOrderExp6aSequence.DifficultyLevel
+Implementation (50pts + 5pts extra credit)	part_2.tex	/^\\section{Implementation (50pts + 5pts extra credit)}$/;"	s
+MAX_DELAY	hw2_rnn_part2.py	/^MAX_DELAY = 8$/;"	v
+MODERATE	res/sequential_tasks.py	/^        EASY, NORMAL, MODERATE, HARD, NIGHTMARE = range(5)$/;"	v	class:TemporalOrderExp6aSequence.DifficultyLevel
+N	hw2_rnn.py	/^N = 26$/;"	v
+N	hw2_rnn_part2.py	/^N = 26$/;"	v
+NIGHTMARE	res/sequential_tasks.py	/^        EASY, NORMAL, MODERATE, HARD, NIGHTMARE = range(5)$/;"	v	class:TemporalOrderExp6aSequence.DifficultyLevel
+NORMAL	res/sequential_tasks.py	/^        EASY, NORMAL, MODERATE, HARD, NIGHTMARE = range(5)$/;"	v	class:TemporalOrderExp6aSequence.DifficultyLevel
+N_EPOCHS	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^N_EPOCHS = 5$/;"	v
+N_EPOCHS	hw2_cnn.py	/^N_EPOCHS = 5$/;"	v
+Recurrent Neural Networks (20 pts)	part_1.tex	/^\\subsection{Recurrent Neural Networks (20 pts) }$/;"	u	section:Theory (50pt)
+SEQ_LENGTH	hw2_rnn_part2.py	/^SEQ_LENGTH = 20$/;"	v
+TemporalOrderExp6aSequence	res/sequential_tasks.py	/^class TemporalOrderExp6aSequence():$/;"	c
+Theory (50pt)	part_1.tex	/^\\section{Theory (50pt)}$/;"	s
+VariableDelayEchoDataset	hw2_rnn_part2.py	/^class VariableDelayEchoDataset(torch.utils.data.IterableDataset):$/;"	c
+\\E	preamble.tex	/^\\newcommand{\\E}{\\mathbb{E}}	% Real Numbers$/;"	C
+\\N	preamble.tex	/^\\newcommand{\\N}{\\mathbb{N}} % Natural Numbers$/;"	C
+\\Q	preamble.tex	/^\\newcommand{\\Q}{\\mathbb{Q}} % Quotient$/;"	C
+\\R	preamble.tex	/^\\newcommand{\\R}{\\mathbb{R}}	% Real Numbers$/;"	C
+\\Z	preamble.tex	/^\\newcommand{\\Z}{\\mathbb{Z}} % Integers$/;"	C
+\\cL	preamble.tex	/^\\newcommand{\\cL}{\\mathcal{L}}$/;"	C
+\\cN	preamble.tex	/^\\newcommand{\\cN}{\\mathcal{N}}$/;"	C
+\\mW	preamble.tex	/^\\newcommand{\\mW}{{W}}$/;"	C
+\\matr	preamble.tex	/^\\newcommand{\\matr}[1]{{#1}}     % ISO complying version$/;"	C
+\\pdv	preamble.tex	/^\\newcommand{\\pdv}[2]{\\frac{\\partial #1}{\\partial #2}}$/;"	C
+\\vb	preamble.tex	/^\\newcommand{\\vb}{{b}}$/;"	C
+\\vect	preamble.tex	/^\\newcommand{\\vect}[1]{{#1}}     % ISO complying version$/;"	C
+\\vx	preamble.tex	/^\\newcommand{\\vx}{{x}}$/;"	C
+\\vy	preamble.tex	/^\\newcommand{\\vy}{{y}}$/;"	C
+\\vz	preamble.tex	/^\\newcommand{\\vz}{{z}}$/;"	C
+__getitem__	res/sequential_tasks.py	/^    def __getitem__(self, index):$/;"	m	class:EchoData
+__getitem__	res/sequential_tasks.py	/^    def __getitem__(self, index):$/;"	m	class:TemporalOrderExp6aSequence
+__init__	hw2_rnn.py	/^    def __init__(self, delay=4, seq_length=15, size=1000):$/;"	m	class:EchoDataset
+__init__	hw2_rnn.py	/^    def __init__(self, hidden_size):$/;"	m	class:GRUMemory
+__init__	hw2_rnn_part2.py	/^    def __init__(self, max_delay=8, seq_length=20, size=1000):$/;"	m	class:VariableDelayEchoDataset
+__init__	res/sequential_tasks.py	/^    def __init__(self, length_range=(100, 111), t1_range=(10, 21), t2_range=(50, 61),$/;"	m	class:TemporalOrderExp6aSequence
+__init__	res/sequential_tasks.py	/^    def __init__(self, series_length=40000, batch_size=32,$/;"	m	class:EchoData
+__iter__	hw2_rnn.py	/^    def __iter__(self):$/;"	m	class:EchoDataset
+__iter__	hw2_rnn_part2.py	/^    def __iter__(self):$/;"	m	class:VariableDelayEchoDataset
+__len__	hw2_rnn.py	/^    def __len__(self):$/;"	m	class:EchoDataset
+__len__	hw2_rnn_part2.py	/^    def __len__(self):$/;"	m	class:VariableDelayEchoDataset
+__len__	res/sequential_tasks.py	/^    def __len__(self):$/;"	m	class:EchoData
+__len__	res/sequential_tasks.py	/^    def __len__(self):$/;"	m	class:TemporalOrderExp6aSequence
+_cstr	res/plot_lib.py	/^def _cstr(s, color='black'):$/;"	f
+_get_clr	res/plot_lib.py	/^def _get_clr(value):$/;"	f
+_print_color	res/plot_lib.py	/^def _print_color(t):$/;"	f
+_visualise_values	res/plot_lib.py	/^def _visualise_values(output_values, result_list):$/;"	f
+accuracy	hw2_rnn.py	/^accuracy = test_model(model)$/;"	v
+batch_size	hw2_rnn.py	/^        batch_size = x.shape[0]$/;"	v
+colors	res/plot_lib.py	/^colors = dict($/;"	v
+correct	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^            loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+correct	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^        loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+correct	hw2_cnn.py	/^            loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+correct	hw2_cnn.py	/^        loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+criterion	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    criterion = criterion.cuda()$/;"	v
+criterion	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^criterion = None # TODO$/;"	v
+criterion	hw2_cnn.py	/^    criterion = criterion.cuda()$/;"	v
+criterion	hw2_cnn.py	/^criterion = None # TODO$/;"	v
+criterion	hw2_rnn.py	/^criterion = torch.nn.CrossEntropyLoss()$/;"	v
+criterion	hw2_rnn_part2.py	/^criterion = torch.nn.CrossEntropyLoss()$/;"	v
+d	hw2_rnn_part2.py	/^        d = d.unsqueeze(1)$/;"	v
+dataset	hw2_rnn_part2.py	/^dataset = VariableDelayEchoDataset(max_delay=8, seq_length=20, size=1000)$/;"	v
+debug_loss	part_1.tex	/^\\label{debug_loss}$/;"	l
+decode_x	res/sequential_tasks.py	/^    def decode_x(self, x):$/;"	m	class:TemporalOrderExp6aSequence
+decode_x_batch	res/sequential_tasks.py	/^    def decode_x_batch(self, x_batch):$/;"	m	class:TemporalOrderExp6aSequence
+decode_y	res/sequential_tasks.py	/^    def decode_y(self, y):$/;"	m	class:TemporalOrderExp6aSequence
+decode_y_batch	res/sequential_tasks.py	/^    def decode_y_batch(self, y_batch):$/;"	m	class:TemporalOrderExp6aSequence
+device	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    device = torch.device("cuda:0")$/;"	v
+device	hw2_cnn.py	/^    device = torch.device("cuda:0")$/;"	v
+ds	hw2_rnn.py	/^ds = EchoDataset(delay=DELAY, size=DATASET_SIZE)$/;"	v
+duration	hw2_rnn.py	/^duration = end_time - start_time$/;"	v
+encode_x	res/sequential_tasks.py	/^    def encode_x(self, x):$/;"	m	class:TemporalOrderExp6aSequence
+encode_x_batch	res/sequential_tasks.py	/^    def encode_x_batch(self, x_batch):$/;"	m	class:TemporalOrderExp6aSequence
+encode_y	res/sequential_tasks.py	/^    def encode_y(self, y):$/;"	m	class:TemporalOrderExp6aSequence
+encode_y_batch	res/sequential_tasks.py	/^    def encode_y_batch(self, y_batch):$/;"	m	class:TemporalOrderExp6aSequence
+end_time	hw2_rnn.py	/^end_time = time.time()$/;"	v
+end_time	hw2_rnn_part2.py	/^end_time = time.time()$/;"	v
+epoch	hw2_rnn.py	/^epoch = 0$/;"	v
+epoch	hw2_rnn_part2.py	/^epoch = 0$/;"	v
+epoch_loss	hw2_rnn_part2.py	/^    epoch_loss = 0$/;"	v
+forward	hw2_rnn.py	/^    def forward(self, x):$/;"	m	class:GRUMemory
+generate_new_series	res/sequential_tasks.py	/^    def generate_new_series(self):$/;"	m	class:EchoData
+generate_pair	res/sequential_tasks.py	/^    def generate_pair(self):$/;"	m	class:TemporalOrderExp6aSequence
+get_loss_and_correct	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^def get_loss_and_correct(model, batch, criterion, device):$/;"	f
+get_loss_and_correct	hw2_cnn.py	/^def get_loss_and_correct(model, batch, criterion, device):$/;"	f
+get_predefined_generator	res/sequential_tasks.py	/^    def get_predefined_generator(difficulty_level, batch_size=32, seed=8382):$/;"	m	class:TemporalOrderExp6aSequence
+idx_to_onehot	hw2_rnn.py	/^def idx_to_onehot(x, k=N+1):$/;"	f
+idx_to_onehot	hw2_rnn_part2.py	/^def idx_to_onehot(x, k=N+1):$/;"	f
+idx_to_s	hw2_rnn.py	/^def idx_to_s(idx):$/;"	f
+idx_to_s	hw2_rnn_part2.py	/^def idx_to_s(idx):$/;"	f
+logits	hw2_rnn.py	/^        logits = logits[:, 4:, :]$/;"	v
+logits	hw2_rnn.py	/^        logits = model(x_onehot)    $/;"	v
+logits	hw2_rnn_part2.py	/^        logits = model(x, d)$/;"	v
+loss	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^            loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+loss	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^        loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+loss	hw2_cnn.py	/^            loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+loss	hw2_cnn.py	/^        loss, correct = get_loss_and_correct(model, batch, criterion, device)$/;"	v
+loss	hw2_rnn.py	/^        loss = criterion(logits.reshape(-1, N + 1), y.reshape(-1))$/;"	v
+loss	hw2_rnn_part2.py	/^        loss = criterion(logits.reshape(-1, N + 1), y.reshape(-1))$/;"	v
+mean_train_loss	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    mean_train_loss = total_train_loss \/ len(train_dataset)$/;"	v
+mean_train_loss	hw2_cnn.py	/^    mean_train_loss = total_train_loss \/ len(train_dataset)$/;"	v
+mean_validation_loss	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    mean_validation_loss = total_validation_loss \/ len(validation_dataset)$/;"	v
+mean_validation_loss	hw2_cnn.py	/^    mean_validation_loss = total_validation_loss \/ len(validation_dataset)$/;"	v
+model	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    model = model.cuda()$/;"	v
+model	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^model = CNN()$/;"	v
+model	hw2_cnn.py	/^    model = model.cuda()$/;"	v
+model	hw2_cnn.py	/^model = CNN()$/;"	v
+model	hw2_rnn.py	/^model = GRUMemory(hidden_size=256).cuda()$/;"	v
+model	hw2_rnn_part2.py	/^model = VariableDelayGRUMemory(hidden_size=512, max_delay=MAX_DELAY)$/;"	v
+np	res/plot_lib.py	/^import numpy as np$/;"	I	nameref:module:numpy
+np	res/sequential_tasks.py	/^import numpy as np$/;"	I	nameref:module:numpy
+optimizer	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^optimizer = None # TODO$/;"	v
+optimizer	hw2_cnn.py	/^optimizer = None # TODO$/;"	v
+optimizer	hw2_rnn.py	/^optimizer = torch.optim.Adam(model.parameters(), lr=0.005)$/;"	v
+optimizer	hw2_rnn_part2.py	/^optimizer = torch.optim.Adam(model.parameters(), lr=0.001)$/;"	v
+pad_sequences	res/sequential_tasks.py	/^def pad_sequences(sequences, maxlen=None, dtype='int32',$/;"	f
+pbar	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^pbar = tqdm(range(N_EPOCHS))$/;"	v
+pbar	hw2_cnn.py	/^pbar = tqdm(range(N_EPOCHS))$/;"	v
+plot_bases	res/plot_lib.py	/^def plot_bases(bases, width=0.04):$/;"	f
+plot_data	res/plot_lib.py	/^def plot_data(X, y, d=0, auto=False, zoom=1):$/;"	f
+plot_intermediate_output	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^def plot_intermediate_output(result, title):$/;"	f
+plot_intermediate_output	hw2_cnn.py	/^def plot_intermediate_output(result, title):$/;"	f
+plot_model	res/plot_lib.py	/^def plot_model(X, y, model):$/;"	f
+plot_state	res/plot_lib.py	/^def plot_state(data, state, b, decoder):$/;"	f
+plt	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	hw2_cnn.py	/^import matplotlib.pyplot as plt$/;"	I	nameref:module:matplotlib.pyplot
+plt	res/plot_lib.py	/^from matplotlib import pyplot as plt$/;"	x	nameref:unknown:pyplot
+prepare_batches	res/sequential_tasks.py	/^    def prepare_batches(self):$/;"	m	class:EchoData
+print_colourbar	res/plot_lib.py	/^def print_colourbar():$/;"	f
+s_to_idx	hw2_rnn.py	/^def s_to_idx(s):$/;"	f
+s_to_idx	hw2_rnn_part2.py	/^def s_to_idx(s):$/;"	f
+scheduler	hw2_rnn.py	/^scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer=optimizer, milestones=[10, 30], gamma/;"	v
+seq_len	hw2_rnn.py	/^        seq_len = x.shape[1]$/;"	v
+set_default	res/plot_lib.py	/^def set_default(figsize=(10, 10), dpi=100):$/;"	f
+show_mat	res/plot_lib.py	/^def show_mat(mat, vect, prod, threshold=-1):$/;"	f
+show_scatterplot	res/plot_lib.py	/^def show_scatterplot(X, colors, title=''):$/;"	f
+start_time	hw2_rnn.py	/^start_time = time.time()$/;"	v
+start_time	hw2_rnn_part2.py	/^start_time = time.time()$/;"	v
+step	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^def step(loss, optimizer):$/;"	f
+step	hw2_cnn.py	/^def step(loss, optimizer):$/;"	f
+test_acc	hw2_rnn.py	/^    test_acc = test_model(model)$/;"	v
+test_acc	hw2_rnn.py	/^test_acc = 0$/;"	v
+test_acc	hw2_rnn_part2.py	/^    test_acc = test_variable_delay_model(model)$/;"	v
+test_acc	hw2_rnn_part2.py	/^test_acc = 0$/;"	v
+test_model	hw2_rnn.py	/^def test_model(model, sequence_length=15):$/;"	f
+test_run	hw2_rnn.py	/^    def test_run(self, s):$/;"	m	class:GRUMemory
+test_variable_delay_model	hw2_rnn_part2.py	/^def test_variable_delay_model(model, seq_length=20):$/;"	f
+to_categorical	res/sequential_tasks.py	/^def to_categorical(y, num_classes=None, dtype='float32'):$/;"	f
+total_train_correct	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    total_train_correct = 0.0$/;"	v
+total_train_correct	hw2_cnn.py	/^    total_train_correct = 0.0$/;"	v
+total_train_loss	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    total_train_loss = 0.0$/;"	v
+total_train_loss	hw2_cnn.py	/^    total_train_loss = 0.0$/;"	v
+total_validation_correct	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    total_validation_correct = 0.0$/;"	v
+total_validation_correct	hw2_cnn.py	/^    total_validation_correct = 0.0$/;"	v
+total_validation_loss	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    total_validation_loss = 0.0$/;"	v
+total_validation_loss	hw2_cnn.py	/^    total_validation_loss = 0.0$/;"	v
+train_accuracies	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^train_accuracies = []$/;"	v
+train_accuracies	hw2_cnn.py	/^train_accuracies = []$/;"	v
+train_accuracy	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    train_accuracy = total_train_correct \/ len(train_dataset)$/;"	v
+train_accuracy	hw2_cnn.py	/^    train_accuracy = total_train_correct \/ len(train_dataset)$/;"	v
+train_dataloader	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=Tru/;"	v
+train_dataloader	hw2_cnn.py	/^train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=Tru/;"	v
+train_dataloader	hw2_rnn.py	/^train_dataloader = torch.utils.data.DataLoader(ds, batch_size=512)$/;"	v
+train_dataloader	hw2_rnn_part2.py	/^train_dataloader = torch.utils.data.DataLoader(dataset, batch_size=64)$/;"	v
+train_losses	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^train_losses = []$/;"	v
+train_losses	hw2_cnn.py	/^train_losses = []$/;"	v
+validation_accuracies	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^validation_accuracies = []$/;"	v
+validation_accuracies	hw2_cnn.py	/^validation_accuracies = []$/;"	v
+validation_accuracy	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^    validation_accuracy = total_validation_correct \/ len(validation_dataset)$/;"	v
+validation_accuracy	hw2_cnn.py	/^    validation_accuracy = total_validation_correct \/ len(validation_dataset)$/;"	v
+validation_dataloader	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^validation_dataloader = torch.utils.data.DataLoader(validation_dataset, batch_size=BATCH_SIZE, n/;"	v
+validation_dataloader	hw2_cnn.py	/^validation_dataloader = torch.utils.data.DataLoader(validation_dataset, batch_size=BATCH_SIZE, n/;"	v
+validation_losses	.ipynb_checkpoints/hw2_cnn-checkpoint.py	/^validation_losses = []$/;"	v
+validation_losses	hw2_cnn.py	/^validation_losses = []$/;"	v
+x	hw2_rnn.py	/^        x = x.cuda()$/;"	v
+x_onehot	hw2_rnn.py	/^        x_onehot = idx_to_onehot(x)$/;"	v
+y	hw2_rnn.py	/^        y = y.cuda()$/;"	v
+y	hw2_rnn.py	/^        y = y[:, 4:]$/;"	v
+y_onehot	hw2_rnn.py	/^        y_onehot = idx_to_onehot(y)$/;"	v

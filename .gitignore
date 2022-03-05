@@ -1,4 +1,7 @@
 */*.zip
+third_party/
+**/*.zip
+**/cats_and_dogs_filtered/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
