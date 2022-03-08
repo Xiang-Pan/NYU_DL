@@ -1,7 +1,7 @@
 '''
 Author: Xiang Pan
 Date: 2022-03-03 01:48:17
-LastEditTime: 2022-03-03 03:44:30
+LastEditTime: 2022-03-07 22:24:58
 LastEditors: Xiang Pan
 Description: 
 FilePath: /HW2/hw2_cnn.py
@@ -46,7 +46,7 @@ model.train()
 if torch.cuda.is_available():
     model = model.cuda()
     criterion = criterion.cuda()
-    device = torch.device("cuda:0")
+    device = torch.device("cuda")
 else:
     device = torch.device("cpu")
 

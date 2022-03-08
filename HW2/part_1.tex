@@ -112,7 +112,7 @@ $$
 $f_W(x) \in \mathbb{R}^{2 \times 2}$,
 
 \begin{equation}
-    f_W[i,j] = \sum_{m=-2}^2 x[i + m]W[1,j, m+2],
+    f_W[i,j] = \sum_{m=-2}^2 x[i + m]W[j, m+2],
 \end{equation}
 
 where $i \in \{3,5\}, j \in \{1, 2\}$
@@ -121,8 +121,8 @@ where $i \in \{3,5\}, j \in \{1, 2\}$
 \begin{align}
     f_W(x)=
     \begin{bmatrix}
-        \sum_{m=-2}^2 x[3 + m]W[1, 1, m+2] & \sum_{m=-2}^2 x[3 + m]W[1, 2, m+2] \\
-        \sum_{m=-2}^2 x[5 + m]W[1, 1, m+2] & \sum_{m=-2}^2 x[5 + m]W[1, 2, m+2]
+        \sum_{m=-2}^2 x[3 + m]W[1, m+2] & \sum_{m=-2}^2 x[3 + m]W[2, m+2] \\
+        \sum_{m=-2}^2 x[5 + m]W[1, m+2] & \sum_{m=-2}^2 x[5 + m]W[2, m+2]
     \end{bmatrix}
 \end{align}
 
@@ -141,16 +141,32 @@ The dimension of $\frac{\partial f_{W}(x)[i][j]}{\partial W}$ is the same as the
 
 
 \begin{align}
-    \frac{\partial f_{W}(x)[i,j]}{\partial W[1,j]} \\
+    \frac{\partial f_{W}(x)}{\partial W} \in \mathbb{R}^{(2*2) \times (2*5)}
+\end{align}
+
+
+\begin{align}
+    \frac{\partial f_{W}(x)[i,j]}{\partial W[1]} 
+    &=\begin{bmatrix}
+        x[i-2], x[i-1], x[i], x[i+1], x[i+2]
+    \end{bmatrix}
+\end{align}
+
+\begin{align}
+    \frac{\partial f_{W}(x)[i,j]}{\partial W[2]} 
     &=\begin{bmatrix}
         x[i-2], x[i-1], x[i], x[i+1], x[i+2]
     \end{bmatrix}
 \end{align}
 
 
-Thus, the whole derivative is a tensor of shape $\frac {\partial f_W(x)}{\partial W} \in \mathcal{R} ^ {2 \times 2 \times 5}$.
+\begin{align}
+    \frac{\partial f_{W}(x)[i]}{\partial W} \in \mathbb{R}^{2 \times 2 \times 5}
+\end{align}
 
-while the first dimension is element index in channel , the second dimension is the channel j, and the third dimension is derivative of the j-th channel' i for 5 weights of thhat channel.j
+Thus, the whole derivative is a tensor of shape $\frac {\partial f_W(x)}{\partial W} \in \mathcal{R} ^ {(2 \times 2) \times (2 \times 5)}$.
+
+while the first dimension is element index in channel , the second dimension is the channel j, and the third dimension is the j-th weight channel, the fourth dimension is the derivative for the i-th item in the j-th weightc channel.
 
 
 % \begin{align}
@@ -175,21 +191,21 @@ $f_{W}(x)$ is a matrix, $x$ is a vector, so the derivative is a matrix of shape 
 \begin{align}
     \frac{\partial f_{W}(x)[1, 1]}{\partial x} 
     &=\begin{bmatrix}
-        W[1,1,1],  W[1,1,2], W[1,1,3], W[1,1,4], W[1,1,5], 0,0
+        W[1,1],  W[1,2], W[1,3], W[1,4], W[1,5], 0,0
     \end{bmatrix}^T
 \end{align}
 
 \begin{align}
     \frac{\partial f_{W}(x)[1, 2]}{\partial x} 
     &=\begin{bmatrix}
-        W[1,1,1], W[1,1,2], W[1,2,3], W[1,2,4], W[1,2,5], 0, 0
+        W[2,1], W[2,2], W[2,3], W[2,4], W[2,5], 0, 0
     \end{bmatrix}^T
 \end{align}
 
 \begin{align}
     \frac{\partial f_{W}(x)[2, 1]}{\partial x} 
     &=\begin{bmatrix}
-        0,0, W[1,1,3], W[1,1,4], W[1,1,5], W[1,1,6], W[1,1,7]
+        0,0, W[1,3], W[1,4], W[1,5], W[1,6], W[1,7]
     \end{bmatrix}^T
 \end{align}
 
@@ -197,7 +213,7 @@ $f_{W}(x)$ is a matrix, $x$ is a vector, so the derivative is a matrix of shape 
 \begin{align}
     \frac{\partial f_{W}(x)[2, 2]}{\partial x} 
     &=\begin{bmatrix}
-        0,0, W[1,2,3], W[1,2,4], W[1,2,5], W[1,2,6], W[1,2,7]
+        0,0, W[2,3], W[2,4], W[2,5], W[2,6], W[2,7]
     \end{bmatrix}^T
 \end{align}
 
@@ -215,6 +231,12 @@ The dimension of $\frac{\partial \ell}{\partial W}$ is the same as the dimension
     &=\frac{\partial \ell}{\partial f_W(x)} \frac{\partial f_W(x)}{\partial W} 
 \end{align}
 
+$$\frac{\partial \ell}{\partial f_W(x)} \in R^{2\times2} $$
+
+$$\frac {\partial f_W(x)}{\partial W} \in \mathcal{R} ^ {(2 \times 2) \times (2 \times 5)}$$
+
+$(2 \times 2) \times ((2 \times 2) \times (2 \times 5)) = 2 \times 5 $
+
 We can \textbf{sum all the path gradients} of the loss to get the gradient of the loss w.r.t. the weights.
 
 \begin{align}
@@ -225,9 +247,7 @@ We can \textbf{sum all the path gradients} of the loss to get the gradient of th
 
 The similarities is that the term use the result from (i).
 
-$$\frac{\partial \ell}{\partial f_W(x)} \in R^{2\times2} $$
 
-(2 * 2) * (2 * 2 * 5) = 1 * 2 * 5
 
 The difference is that scalar by matrix derivative sum up all the path gradients to the the element.
 
@@ -407,7 +427,7 @@ where $\sigma$ is element-wise sigmoid, $x[t] \in \mathbb{R}^n$, $h[t] \in \math
 
 \begin{align}
     \frac{\partial \ell}{\partial W_x} \in \mathcal{R}^{m \times n} \\
-    \frac{\partial \ell}{\partial h[t]} \in \mathcal{R}^{m \times 1} \\
+    \frac{\partial \ell}{\partial h[t]} \in \mathcal{R}^{m \times 1} 
 \end{align}
 
 \begin{align}
@@ -416,16 +436,21 @@ where $\sigma$ is element-wise sigmoid, $x[t] \in \mathbb{R}^n$, $h[t] \in \math
 
 \begin{align}
     \frac{\partial \ell}{\partial W_x} &= \frac{\partial \ell}{\partial h[t]}  \frac{\partial h[t]}{\partial W_x} \\
-    &= (1-c[t]) \odot (\frac{\partial \ell}{\partial h[t]} x[t]^T)
+    &= (1-c[t]) \odot (\frac{\partial \ell}{\partial h[t]}) x[t]^T
 \end{align}
 
 The similarities are that the forward pass is a function of the current input $x[t]$ and the previous hidden state $h[t-1]$, and the backward pass is a function of the current hidden state $h[t]$ and the next input $x[t]$.
 
 \subsubsection*{(d)}
 
+\begin{align}
+    \frac{\partial \ell}{\partial h[t-1]} &= \frac{\partial \ell}{\partial h[t]}  
+    (\frac{\partial h[t]}{\partial h[t-1]} + \frac{\partial h[t]}{\partial c[t]}  \frac{\partial c[t]}{\partial h[t-1]})
+\end{align}
+
 There is a path from h[t] to h[t-1] without passing through the sigmoid, which can somehow prevent the gradient vanishing problem.
 
-But for the gradient exploding, there is no gate to regularize the gradient, the model will still suffer from the gradient exploding problem.
+But for the gradient exploding, there is no gate to regularize the gradient, there is a direct path from h[t] to h[t-1], if the gradient is too large, it will make all the steps gradients explode, the model will still suffer from the gradient exploding problem.
 
 
 \subsection{Debugging loss curves (10pts)}

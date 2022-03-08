@@ -1,0 +1,129 @@
+\section{Theory (50pt)}
+
+\subsection{Energy Based Models Intuition (15pts) }
+This question tests your intuitive understanding of Energy-based models and their properties. 
+\begin{enumerate}[(a)]
+
+\item (1pts) How do energy-based models allow for modeling situations where the mapping from input $x_i$ to output $y_i$ is not 1 to 1, but 1 to many?
+
+
+
+\item (2pts) How do energy-based models differ from models that output probabilities?
+
+\item  (2pts) How can you use energy function $F_W(x, y)$ to calculate a probability $p(y \mid x)$?
+
+\item (2pts) What are the roles of the loss function and energy function? 
+
+\item (2pts) Can loss function be equal to the energy function?
+
+\item (2pts) What problems can be caused by using only positive examples for energy (pushing down energy of correct inputs only)? How can it be avoided?
+
+\item 
+(2pts) Briefly explain the three methods that can be used to shape the energy function.
+
+\item (2pts) Provide an example of a loss function that uses negative examples. The format should be as follows $\ell_\text{example}(x, y, W) = F_W(x, y)$.
+
+\end{enumerate}
+
+\textbf{Solution:}
+
+\subsubsection*{(a)}
+Energy Based Model can give the energy estimation of different given y, thus for one to many mapping, we can set a threshold to get the y inference list.
+
+\subsubsection*{(b)}
+Probability Model is a special case of Energy Based Model.
+
+- The energy is such that the integral $\int_{y \in \mathcal{Y}} e^{-\beta E(W, y, X)}$ (partition function) converges.
+
+- The model is trained by minimizing the negative log-likelihood loss.
+
+\subsubsection*{(c)}
+How can you use energy function $F_W(x, y)$ to calculate a probability $p(y \mid x)$?
+
+\begin{equation}
+    P(y \mid x)=\frac{e^{-\beta F(x, y)}}{\int_{y^{\prime}} e^{-\beta F\left(x, y^{\prime}\right)}}
+\end{equation}
+
+\subsubsection*{(d)}
+What are the roles of the loss function and energy function? 
+
+The loss function is used to minimizing the energy for target training data points and maximize the energy for the rest of the data points (if they are in the loss).
+The energy function is used to calculate the energy of the data points.
+
+
+\subsubsection*{(e)}
+Can loss function be equal to the energy function?
+
+If we only consider the target training data points, the loss function is equal to the energy function.
+
+\subsubsection*{(f)}
+What problems can be caused by using only positive examples for energy (pushing down energy of correct inputs only)? How can it be avoided?
+
+The model is not robust, the decision boundary is not that clear, and adversarial attack can ruin the model.
+
+Push up other areas energy.
+
+
+
+\subsubsection*{(g)}
+Briefly explain the three methods that can be used to shape the energy function.
+
+
+\subsubsection*{(h)}
+Provide an example of a loss function that uses negative examples. The format should be as follows $\ell_\text{example}(x, y, W) = F_W(x, y)$.
+
+
+
+
+\subsection{Negative log-likelihood loss (20 pts) }
+
+Let's consider an energy-based model we are training to do classification of input between n classes. $F_W(x, y)$ is the energy of input $x$ and class $y$. We consider n classes: $y \in \{1, \dots, n\}$.
+
+\begin{enumerate}[(i)]
+\item (2pts) For a given input $x$, write down an expression for a Gibbs distribution over labels $y$ that this energy-based model specifies. Use $\beta$ for the constant multiplier.
+ 
+\item (5pts) Let's say for a particular data sample $x$, we have the label $y$. Give the expression for the negative log likelihood loss, i.e. negative log likelihood of the correct label (don't copy expressions from the slides, show step-by-step derivation of the loss function from the expression of the previous subproblem). For easier calculations in the following subproblem, multiply the loss by $\frac{1}{\beta}$.
+
+\item (8pts) Now, derive the gradient of that expression with respect to $W$ (just providing the final expression is not enough). Why can it be intractable to compute it, and how can we get around the intractability? 
+
+\item (5pts) Explain why negative log-likelihood loss pushes the energy of the correct example to negative infinity, and all others to positive infinity, no matter how close the two examples are, resulting in an energy surface with really sharp edges in case of continuous $y$ (this is usually not an issue for discrete $y$ because there's no distance measure between different classes).
+
+\end{enumerate}
+
+\subsection{Comparing Contrastive Loss Functions (15pts)}
+
+In this problem, we're going to compare a few contrastive loss functions. We are going to look at the behavior of the gradients, and understand what uses each loss function has. In the following subproblems, $m$ is a margin, $m \in \R$, $x$ is input, $y$ is the correct label, $\bar y$ is the incorrect label. Define the loss in the following format: $\ell_{example}(x, y, \bar y, W) = F_W(x, y)$.
+
+\begin{enumerate}[(a)]
+\item (3pts) \textbf{Simple loss function} is defined as follows:
+
+$$
+\ell_\text{simple}(x, y, \bar y, W) = \left[ F_W(x, y)\right]^+ + \left[m - F_W(x, \bar y)\right]^+
+$$
+
+Assuming we know the derivative $\pdv{F_W(x, y)}{W}$ for any $x, y$, give an expression for the partial derivative of the $\ell_\text{simple}$ with respect to $W$.
+
+\item (3pts) \textbf{Hinge loss} is defined as follows:
+
+$$
+\ell_\text{hinge}(x, y, \bar y, W) = \left[ F_W(x, y) - F_W(x, \bar y) + m\right ]^+
+$$
+
+Assuming we know the derivative $\pdv{F_W(x, y)}{W}$ for any $x, y$, give an expression for the partial derivative of the $\ell_\text{hinge}$ with respect to $W$.
+
+\item (3pts) \textbf{Square-Square loss} is defined as follows:
+
+$$
+\ell_\text{square-square}(x, y, \bar y, W) = \left(\left[ F_W(x, y)\right]^+ \right)^2 + \left( \left[m - F_W(x, \bar y)\right]^+ \right)^2
+$$
+
+Assuming we know the derivative $\pdv{F_W(x, y)}{W}$ for any $x, y$, give an expression for the partial derivative of the $\ell_\text{square-square}$ with respect to $W$.
+
+\item (6pts) \textbf{Comparison.} 
+\begin{enumerate}[(i)]
+    \item (2pts) Explain how NLL loss is different from the three losses above.
+    \item (2pts) What is the role of the margin in hinge loss? Why do we take only the positive part of $ F_W(x, y) - F_W(x, \bar y) + m$?
+    \item (2pts) How are simple loss and square-square loss different from hinge loss? In what situations would you use simple loss, and in what situations would you use square-square loss?
+\end{enumerate}
+
+\end{enumerate}

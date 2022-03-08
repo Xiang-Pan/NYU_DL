@@ -1,0 +1,82 @@
+% Setting
+\usepackage{fouriernc}
+\usepackage[T1]{fontenc}
+
+% Formatting
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+
+% Text
+
+% Math
+\usepackage{mathtools, amssymb, bm, amsthm}
+\usepackage{bbm}
+% original mathcal
+\DeclareMathAlphabet{\mathcal}{OMS}{zplm}{m}{n}
+
+% Math Theorem
+
+% Math Shortcut
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\samax}{softargmax}
+\DeclareMathOperator{\smax}{softmax}
+\DeclareMathOperator{\smin}{softmin}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator*{\argmax}{\arg\max}
+\DeclareMathOperator*{\argmin}{\arg\min}
+\newcommand{\matr}[1]{{#1}}     % ISO complying version
+\newcommand{\vect}[1]{{#1}}     % ISO complying version
+
+% Number sets
+\newcommand{\N}{\mathbb{N}} % Natural Numbers
+\newcommand{\Z}{\mathbb{Z}} % Integers
+\newcommand{\Q}{\mathbb{Q}} % Quotient
+\newcommand{\R}{\mathbb{R}}	% Real Numbers
+\newcommand{\E}{\mathbb{E}}	% Real Numbers
+% \newcommand{\C}{\mathbb{C}} % Complex Numbers
+
+% ML
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cN}{\mathcal{N}}
+
+\newcommand{\vx}{{x}}
+\newcommand{\vy}{{y}}
+\newcommand{\vb}{{b}}
+\newcommand{\vz}{{z}}
+\newcommand{\mW}{{W}}
+
+\newcommand{\pdv}[2]{\frac{\partial #1}{\partial #2}}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+
+% Scientific notation
+
+%Drawing
+
+
+%Algorithm
+\usepackage[ruled,vlined]{algorithm2e}
+
+% Other
+\usepackage[shortlabels]{enumitem}
+\usepackage{cleveref}
+
+\usepackage{xcolor}
+
+\def\solutions{}
+
+\newenvironment{answer}
+{
+\color{red}%
+\textbf{Answer:}
+}
+{}
+
