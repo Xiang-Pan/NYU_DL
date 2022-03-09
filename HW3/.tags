@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/xiangpan/Labs/NYU_DL/HW3/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210905.0/
+(a)	part_1.tex	/^\\subsubsection*{(a)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(b)	part_1.tex	/^\\subsubsection*{(b)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(c)	part_1.tex	/^\\subsubsection*{(c)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(d)	part_1.tex	/^\\subsubsection*{(d)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(e)	part_1.tex	/^\\subsubsection*{(e)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(f)	part_1.tex	/^\\subsubsection*{(f)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(g)	part_1.tex	/^\\subsubsection*{(g)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+(h)	part_1.tex	/^\\subsubsection*{(h)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+Comparing Contrastive Loss Functions (15pts)	part_1.tex	/^\\subsection{Comparing Contrastive Loss Functions (15pts)}$/;"	u	section:Theory (50pt)
+Energy Based Models Intuition (15pts)	part_1.tex	/^\\subsection{Energy Based Models Intuition (15pts) }$/;"	u	section:Theory (50pt)
+Implementation (50pt)	part_2.tex	/^\\section{Implementation (50pt)}$/;"	s
+Negative log-likelihood loss (20 pts)	part_1.tex	/^\\subsection{Negative log-likelihood loss (20 pts) }$/;"	u	section:Theory (50pt)
+SimpleNet	3.py	/^class SimpleNet(torch.nn.Module):$/;"	c
+SimpleWordsDataset	3.py	/^class SimpleWordsDataset(torch.utils.data.IterableDataset):$/;"	c
+Theory (50pt)	part_1.tex	/^\\section{Theory (50pt)}$/;"	s
+\\E	preamble.tex	/^\\newcommand{\\E}{\\mathbb{E}}	% Real Numbers$/;"	C
+\\N	preamble.tex	/^\\newcommand{\\N}{\\mathbb{N}} % Natural Numbers$/;"	C
+\\Q	preamble.tex	/^\\newcommand{\\Q}{\\mathbb{Q}} % Quotient$/;"	C
+\\R	preamble.tex	/^\\newcommand{\\R}{\\mathbb{R}}	% Real Numbers$/;"	C
+\\Z	preamble.tex	/^\\newcommand{\\Z}{\\mathbb{Z}} % Integers$/;"	C
+\\cL	preamble.tex	/^\\newcommand{\\cL}{\\mathcal{L}}$/;"	C
+\\cN	preamble.tex	/^\\newcommand{\\cN}{\\mathcal{N}}$/;"	C
+\\mW	preamble.tex	/^\\newcommand{\\mW}{{W}}$/;"	C
+\\matr	preamble.tex	/^\\newcommand{\\matr}[1]{{#1}}     % ISO complying version$/;"	C
+\\pdv	preamble.tex	/^\\newcommand{\\pdv}[2]{\\frac{\\partial #1}{\\partial #2}}$/;"	C
+\\vb	preamble.tex	/^\\newcommand{\\vb}{{b}}$/;"	C
+\\vect	preamble.tex	/^\\newcommand{\\vect}[1]{{#1}}     % ISO complying version$/;"	C
+\\vx	preamble.tex	/^\\newcommand{\\vx}{{x}}$/;"	C
+\\vy	preamble.tex	/^\\newcommand{\\vy}{{y}}$/;"	C
+\\vz	preamble.tex	/^\\newcommand{\\vz}{{z}}$/;"	C
+__init__	3.py	/^    def __init__(self):$/;"	m	class:SimpleNet
+__init__	3.py	/^    def __init__(self, max_length, len=100, jitter=False, noise=False):$/;"	m	class:SimpleWordsDataset
+__iter__	3.py	/^    def __iter__(self):$/;"	m	class:SimpleWordsDataset
+__len__	3.py	/^    def __len__(self):$/;"	m	class:SimpleWordsDataset
+draw_text	3.py	/^    def draw_text(self, text, length=None, jitter=False, noise=False):$/;"	m	class:SimpleWordsDataset
+forward	3.py	/^    def forward(self, x):$/;"	m	class:SimpleNet
+img	3.py	/^img = next(iter(sds))[0]$/;"	v
+model	3.py	/^model = Si$/;"	v
+model	3.py	/^model = model.cuda()$/;"	v
+nn	3.py	/^import torch.nn as nn$/;"	I	nameref:module:torch.nn
+plt	3.py	/^from matplotlib import pyplot as plt$/;"	x	nameref:unknown:pyplot
+sds	3.py	/^sds = SimpleWordsDataset(1, jitter=True, noise=False)$/;"	v
+simple_transforms	3.py	/^simple_transforms = transforms.Compose([$/;"	v
+train_model	3.py	/^def train_model(model, epochs, dataloader, criterion, optimizer):$/;"	f
