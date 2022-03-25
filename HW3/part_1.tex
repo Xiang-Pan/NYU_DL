@@ -272,11 +272,12 @@ $$
      & = 2 \left[F_W(x, y)\right]^+
     \frac{\partial \left[F_W(x, y)\right]^+}{\partial W}
     + 2 \left[m -F_W(x, \bar y)\right]^+
-    \frac{\partial \left[m -F_W(x, \bar y)\right]^+}{\partial W}                                                              \\
+    \frac{\partial \left[m -F_W(x, \bar y)\right]^+}{\partial W}                                                                                                                                                                       \\
      & = \begin{cases}
-             2 \left[F_W(x, y)\right] \frac{\partial \left[F_W(x, y)\right]}{\partial W}         & \text{if } F_W(x, y) \geq m    \\
-             (-2m + 4 \left[F_W(x, y)\right]) \frac{\partial \left[F_W(x, y)\right]}{\partial W} & \text{if }0 \leq F_W(x, y) < m \\
-             (-2m +2 \left[F_W(x, y)\right])  \frac{\partial \left[F_W(x, y)\right]}{\partial W} & \text{if }  F_W(x, y) < 0      \\
+             2 \left[F_W(x, y)\right] \frac{\partial \left[F_W(x, y)\right]}{\partial W}                                                                               & \text{if } F_W(x, y) > 0  \text{ and }  F_W(x, \bar{y}) > m       \\
+             2 \left[F_W(x, y)\right] \frac{\partial \left[F_W(x, y)\right]}{\partial W} - 2 \left[m -F_W(x, \bar y)\right] \frac{\partial F_W(x, \bar y)}{\partial W} & \text{if } F_W(x, y) > 0 \text{ and }  F_W(x, \bar{y}) \leq  m   \\
+             0                                                                                                                                                         & \text{if } F_W(x, y) \leq 0  \text{ and }  F_W(x, \bar{y}) >  m   \\
+             - 2 \left[m -F_W(x, \bar y)\right] \frac{\partial F_W(x, \bar y)}{\partial W}                                                                             & \text{if } F_W(x, y) \leq 0  \text{ and }  F_W(x, \bar{y}) \leq m \\
          \end{cases}
 \end{align}
 
@@ -302,4 +303,6 @@ The margin term is the gap between the target (training data point) energy and t
 
 \textbf{(iii)}
 
-The simple loss and hinge loss are two-piecewise loss, but the square-square loss is three-piecewise loss.
+The simple loss and hinge loss are two-piecewise loss, the threshold is based on the relative energy gap of the target and the other location, but square-square loss can be utilized to force the target energy less than zero and the other location energy larger than m. The square-square loss do not only optimize the relative energy gap, but also optimize the absolute energy range.
+
+If we only would like to optimize the relative energy gap, we can use the simple loss, but if we want to control the absolute energy range, we can use the square-square loss.
