@@ -17,6 +17,7 @@
 (f)	part_1.tex	/^\\subsubsection*{(f)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
 (g)	part_1.tex	/^\\subsubsection*{(g)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
 (h)	part_1.tex	/^\\subsubsection*{(h)}$/;"	b	subsection:Theory (50pt)""Energy Based Models Intuition (15pts)
+ALPHABET_SIZE	3.py	/^ALPHABET_SIZE = 26$/;"	v
 Comparing Contrastive Loss Functions (15pts)	part_1.tex	/^\\subsection{Comparing Contrastive Loss Functions (15pts)}$/;"	u	section:Theory (50pt)
 Energy Based Models Intuition (15pts)	part_1.tex	/^\\subsection{Energy Based Models Intuition (15pts) }$/;"	u	section:Theory (50pt)
 Implementation (50pt)	part_2.tex	/^\\section{Implementation (50pt)}$/;"	s
@@ -43,13 +44,18 @@ __init__	3.py	/^    def __init__(self):$/;"	m	class:SimpleNet
 __init__	3.py	/^    def __init__(self, max_length, len=100, jitter=False, noise=False):$/;"	m	class:SimpleWordsDataset
 __iter__	3.py	/^    def __iter__(self):$/;"	m	class:SimpleWordsDataset
 __len__	3.py	/^    def __len__(self):$/;"	m	class:SimpleWordsDataset
+cross_entropy	3.py	/^def cross_entropy(energies, *args, **kwargs):$/;"	f
+dataloader	3.py	/^dataloader = torch.utils.data.DataLoader(sds, batch_size=16, num_workers=0, collate_fn=simple_co/;"	v
 draw_text	3.py	/^    def draw_text(self, text, length=None, jitter=False, noise=False):$/;"	m	class:SimpleWordsDataset
 forward	3.py	/^    def forward(self, x):$/;"	m	class:SimpleNet
+get_accuracy	3.py	/^def get_accuracy(model, dataset):$/;"	f
 img	3.py	/^img = next(iter(sds))[0]$/;"	v
-model	3.py	/^model = Si$/;"	v
-model	3.py	/^model = model.cuda()$/;"	v
+model	3.py	/^model = SimpleNet().cuda()$/;"	v
 nn	3.py	/^import torch.nn as nn$/;"	I	nameref:module:torch.nn
+optim	3.py	/^import torch.optim as optim$/;"	I	nameref:module:torch.optim
 plt	3.py	/^from matplotlib import pyplot as plt$/;"	x	nameref:unknown:pyplot
 sds	3.py	/^sds = SimpleWordsDataset(1, jitter=True, noise=False)$/;"	v
+sds	3.py	/^sds = SimpleWordsDataset(1, len=1000, jitter=True, noise=False)$/;"	v
+simple_collate_fn	3.py	/^def simple_collate_fn(samples):$/;"	f
 simple_transforms	3.py	/^simple_transforms = transforms.Compose([$/;"	v
 train_model	3.py	/^def train_model(model, epochs, dataloader, criterion, optimizer):$/;"	f
