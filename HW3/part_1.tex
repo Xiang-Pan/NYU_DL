@@ -54,14 +54,16 @@ The energy function is used to calculate the energy of the data points.
 \subsubsection*{(e)}
 Can loss function be equal to the energy function?
 
-If we only consider the target training data points, the loss function is equal to the energy function.
+If we only consider the target training data points, the loss function is equal to the energy function. We can say we want low energy/loss in the target points.
+
+For EBM, final optimization (if we call the whole optimization target as   loss) is the optimization about energy of target points and other areas, so they are different.
 
 \subsubsection*{(f)}
 What problems can be caused by using only positive examples for energy (pushing down energy of correct inputs only)? How can it be avoided?
 
 The model is not robust, the decision boundary is not that clear, and adversarial attack can ruin the model.
 
-Push up other areas energy.
+Push up other areas energy. Or contrastively make the energy gap between target points and other area larger.
 
 
 
@@ -69,13 +71,17 @@ Push up other areas energy.
 Briefly explain the three methods that can be used to shape the energy function.
 
 \textbf{Contrastive methods}:
-Push down on energy of training samples.
 
-Pull up on energy of suitably-generated contrastive samples.
+1. Push down on energy of training samples. Pull up on energy of suitably-generated contrastive samples or anywhere else.
+
+2. Train a function that maps points off the data manifold to points on the data manifold.
 
 \textbf{Regularized Methods}:
-Regularizer minimizes the volume of space that can take low energy
+1. Regularizer minimizes the volume of space that can take low energy.
 
+2. build the machine so that the volume of low energy space is bounded
+
+3. minimize the gradient and maximize the curvature around data points:
 
 \subsubsection*{(h)}
 Provide an example of a loss function that uses negative examples. The format should be as follows $\ell_\text{example}(x, y, W) = F_W(x, y)$.
@@ -303,6 +309,10 @@ The margin term is the gap between the target (training data point) energy and t
 
 \textbf{(iii)}
 
+\textbf{Optimization}
+Just like L1 and L2 norm, the optimization of square-square loss is more efficient in non-spase case. We will use square-square loss in non-spase loss calculation. In the meanwhile, square-square loss solution space is more stable, as illustrated below.
+
+\textbf{Relative Gap and Absolute Value}
 The simple loss and hinge loss are two-piecewise loss, the threshold is based on the relative energy gap of the target and the other location, but square-square loss can be utilized to force the target energy less than zero and the other location energy larger than m. The square-square loss do not only optimize the relative energy gap, but also optimize the absolute energy range.
 
 If we only would like to optimize the relative energy gap, we can use the simple loss, but if we want to control the absolute energy range, we can use the square-square loss.

@@ -4,6 +4,7 @@ third_party/
 **/cats_and_dogs_filtered/
 **/cached_models/
 **/cached_models_*/
+**/cached_datasets/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
